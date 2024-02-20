@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivChecker.Domain", "DivChecker.Domain\DivChecker.Domain.csproj", "{273949A3-5C13-402E-A98E-7ABA75143B76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivChecker.Domain.UnitTests", "DivChecker.Domain.UnitTests\DivChecker.Domain.UnitTests.csproj", "{B78AEE14-B97D-4BA3-8B53-0A138077CDA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{273949A3-5C13-402E-A98E-7ABA75143B76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{273949A3-5C13-402E-A98E-7ABA75143B76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{273949A3-5C13-402E-A98E-7ABA75143B76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{273949A3-5C13-402E-A98E-7ABA75143B76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B78AEE14-B97D-4BA3-8B53-0A138077CDA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B78AEE14-B97D-4BA3-8B53-0A138077CDA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B78AEE14-B97D-4BA3-8B53-0A138077CDA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B78AEE14-B97D-4BA3-8B53-0A138077CDA6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E3A5DCE2-D6E1-4D85-81B5-73D3429E3CDE}
+	EndGlobalSection
+EndGlobal
