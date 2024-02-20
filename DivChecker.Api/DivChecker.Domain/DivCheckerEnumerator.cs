@@ -21,7 +21,7 @@ public static class DivCheckerEnumerator
             errors.Add("Sample size must be greater or equal than 0");
         }
 
-        if (errors.Any())
+        if (errors.Count != 0)
         {
             return Result<IEnumerable<NumberResultPair>>.Failure(errors);
         }
