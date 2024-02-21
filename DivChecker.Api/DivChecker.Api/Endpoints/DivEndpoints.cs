@@ -31,7 +31,7 @@ public static class DivEndpoints
         return TypedResults.Ok(result.Value!.ToList());
     }
 
-    private static Results<Ok<List<NumberResultPair>>, BadRequest<List<string>>> Get2(int input1, int input2, int sampleSize, int page = 1, int pageSize = 10)
+    private static Results<Ok<PagedResponse<NumberResultPair>>, BadRequest<List<string>>> Get2(int input1, int input2, int sampleSize, int page = 1, int pageSize = 10)
     {
         var pagingParamsResult = PagingParams.Create(page, pageSize);
 
@@ -50,6 +50,6 @@ public static class DivEndpoints
             return TypedResults.BadRequest(result.Errors);
         }
 
-        return TypedResults.Ok(result.Value!.ToList());
+        return TypedResults.Ok(new PagedResponse<NumberResultPair>(result.Value!.ToList(), sampleSize));
     }
 }

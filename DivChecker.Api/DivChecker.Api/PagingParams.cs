@@ -1,6 +1,6 @@
 ﻿using DivChecker.Domain;
 
-namespace DivChecker.Api.Endpoints;
+namespace DivChecker.Api;
 
 public class PagingParams
 {
