@@ -1,0 +1,22 @@
+services:
+
+  api:
+    build:
+      context: DivChecker.Api
+      dockerfile: DivChecker.Api/Dockerfile
+    ports:
+      - 81:81
+
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:81
+
+  web:
+    build:
+      context: divchecker-web
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    restart: always
+    depends_on:
+      - api

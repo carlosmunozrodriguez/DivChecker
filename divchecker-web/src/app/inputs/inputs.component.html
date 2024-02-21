@@ -1,0 +1,15 @@
+<h2>inputs works!</h2>
+
+<form [formGroup]="inputsForm" (submit)="submit()">
+  <label for="input1">Input 1</label>
+  <input id="input1" type="number" min="1" formControlName="input1">
+  <br />
+  <label for="input2">Input 2</label>
+  <input id="input2" type="number" min="1" formControlName="input2">
+  <br />
+  <label for="sampleSize">Sample Size</label>
+  <input id="sampleSize" type="number" min="0" formControlName="sampleSize">
+  <br />
+
+  <input type="submit" value="Submit">
+</form>

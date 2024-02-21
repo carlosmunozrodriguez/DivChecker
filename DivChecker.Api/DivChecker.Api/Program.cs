@@ -9,6 +9,14 @@ builder.Services
     .AddSwaggerGen()
     .AddProblemDetails()
     .AddOutputCache()
+    .AddCors(options =>
+    {
+        options.AddDefaultPolicy(config =>
+        {
+            //Only for development
+            config.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+        });
+    })
     .Configure<JsonOptions>(options =>
     {
         options.SerializerOptions.Converters.Add(new JsonStringEnumConverter());
@@ -24,12 +32,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors();
 app.UseOutputCache();
 
-app.MapGet("/divs", DivEndpoints.Get)
-.WithName("GetDivs")
-.WithOpenApi()
-.CacheOutput( x=> x.SetVaryByQuery("input1", "input2", "sampleSize"));
+app.MapDivEndpoints();
 
 app.Run();
 

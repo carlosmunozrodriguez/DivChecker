@@ -1,0 +1,25 @@
+<button (click)="back()">Back</button>
+
+<div *ngIf="errors.length">
+  <h2>Errors</h2>
+
+  <ul>
+    <li *ngFor="let error of errors">
+      <span>
+        {{ error }}
+      </span>
+    </li>
+  </ul>
+</div>
+
+<table *ngIf="!errors.length">
+  <thead>
+    <th>Number</th>
+    <th>Result</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let result of results">
+      <td>{{result.number}}</td>
+      <td>{{result.result | yesNoResult }}</td>
+    </tr>
+</table>
